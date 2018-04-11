@@ -69,7 +69,7 @@ export class VgPlayPause implements OnInit, OnDestroy {
         this.playPause();
     }
 
-    @HostListener('keydown', ['$event'])
+    @HostListener('document:keydown', ['$event'])
     onKeyDown(event: KeyboardEvent) {
         // On press Enter (13) or Space (32)
         if (event.keyCode === 13 || event.keyCode === 32) {
